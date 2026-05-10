@@ -1,0 +1,51 @@
+:root {
+    --bg-color: #0a0c0b;
+    --text-color: #a3a3a3;
+    --accent-green: #2d3b2d;
+    --signal-green: #4ade80;
+    --industrial-gray: #333333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', monospace; /* Keeps the technical/typewriter feel */
+    line-height: 1.6;
+    padding: 40px;
+    margin: 0;
+}
+
+h1 {
+    color: var(--signal-green);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border-bottom: 2px solid var(--accent-green);
+    padding-bottom: 10px;
+}
+
+/* This styles the images in your assets folder */
+img {
+    max-width: 100%;
+    border: 1px solid var(--industrial-gray);
+    filter: grayscale(20%) brightness(80%); /* Makes your cemetery shots look moodier */
+    margin: 20px 0;
+}
+
+.bunker-note {
+    background-color: #121513;
+    border-left: 3px solid var(--accent-green);
+    padding: 15px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+a {
+    color: var(--signal-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
