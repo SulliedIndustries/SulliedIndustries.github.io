@@ -112,3 +112,26 @@ body {
     cursor: pointer;
     transition: 0.3s; /* Makes the glow fade in smoothly */
 }
+
+.service-card {
+    background: #0d0f0e;
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.service-card h3 {
+    color: var(--signal-green);
+    margin-top: 0;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-family: monospace;
+}
