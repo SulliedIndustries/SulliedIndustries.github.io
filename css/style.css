@@ -76,3 +76,22 @@ body {
     font-size: 0.9em;
     color: #888;
 }
+
+.artist-card {
+    display: flex; /* The magic line that puts them side-by-side */
+    align-items: center; /* Centers the text vertically with the photo */
+    gap: 20px; /* Space between the photo and the text */
+    background: #121513; /* Subtle dark background for the card */
+    padding: 15px;
+    border: 1px solid #2d3b2d;
+    margin-bottom: 20px;
+    max-width: 500px; /* Keeps it from stretching too wide */
+}
+
+.artist-thumb {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Keeps the photo from looking squashed */
+    border: 1px solid var(--signal-green);
+    filter: grayscale(30%);
+}
