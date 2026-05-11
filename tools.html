@@ -14,75 +14,45 @@
         <p style="color: #666; font-size: 0.9em;">Community-vetted resources for the independent architect.</p>
     </header>
 
-    <div class="tool-controls">
-        <input type="text" id="toolSearch" placeholder="SEARCH SYSTEM (e.g. 'Conversion', 'Visuals')..." onkeyup="filterTools()">
+    <div class="tool-controls" style="display: flex; justify-content: center; gap: 20px; margin: 30px 0; align-items: center;">
+        <input type="text" id="toolSearch" placeholder="SEARCH SYSTEM..." onkeyup="filterTools()" style="width: 400px; padding: 12px; background: #000; border: 1px solid #2d3b2d; color: #fff;">
         <a href="contact.html?service=toolsuggest" class="login-btn" style="padding: 10px 20px;">[+] SUGGEST HARDWARE</a>
     </div>
 
     <div class="tools-grid" id="toolsGrid">
-
         <div class="tool-entry" data-category="conversion editing">
             <div class="entry-identity">
                 <span class="tag">CONVERSION</span>
                 <h3 class="tool-name">CloudConvert</h3>
                 <p class="tool-desc">The primary engine for audio spec compliance and format shifting.</p>
             </div>
-
             <div class="entry-context">
                 <div class="top-review">
                     <p class="user-review">"The only thing that reliably hits the 16-bit/44.1kHz target every time."</p>
                     <span class="review-author">— K_KAYE</span>
                 </div>
             </div>
-
             <div class="entry-log">
                 <div class="stat-group">
                     <span>OVERALL: [■■■■□]</span>
                     <span>COMPLEX: [■■■□□]</span>
                     <span>BEGINNER: [■■■■■]</span>
                 </div>
-                <a href="#" class="log-btn">ADD LOG ENTRY</a>
+                <a href="contact.html?service=toollog" class="log-btn">ADD LOG ENTRY</a>
             </div>
         </div>
-
-        <div class="tool-entry" data-category="visuals editing">
-            <div class="entry-identity">
-                <span class="tag">VISUALS</span>
-                <h3 class="tool-name">Photopea</h3>
-                <p class="tool-desc">Browser-based image manipulation. Equivalent to industry-standard software.</p>
-            </div>
-
-            <div class="entry-context">
-                <div class="top-review">
-                    <p class="user-review">"Essential for fixing CMYK color errors before uploading cover art."</p>
-                    <span class="review-author">— ADMIN</span>
-                </div>
-            </div>
-
-            <div class="entry-log">
-                <div class="stat-group">
-                    <span>OVERALL: [■■■■■]</span>
-                    <span>COMPLEX: [■■■■□]</span>
-                    <span>BEGINNER: [■■■□□]</span>
-                </div>
-                <a href="#" class="log-btn">ADD LOG ENTRY</a>
-            </div>
-        </div>
-
     </div>
 
     <script>
-        // Inject Nav
         fetch('nav.html').then(res => res.text()).then(data => {
             document.getElementById('nav-placeholder').innerHTML = data;
         });
 
-        // Search Filter Logic
         function filterTools() {
             let input = document.getElementById('toolSearch').value.toLowerCase();
             let cards = document.getElementsByClassName('tool-entry');
             for (let i = 0; i < cards.length; i++) {
-                let content = cards[i].innerText.toLowerCase() + cards[i].getAttribute('data-category');
+                let content = cards[i].innerText.toLowerCase();
                 cards[i].style.display = content.includes(input) ? "grid" : "none";
             }
         }
