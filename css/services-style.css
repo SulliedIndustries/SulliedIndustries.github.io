@@ -152,3 +152,25 @@ a:hover .bunker-note {
 .login-btn {
     transition: 0.3s ease !important;
 }
+
+/* --- ADD-ON BUTTON LIGHT UP --- */
+
+/* 1. Make the [REQUEST] tags turn green when the link is hovered */
+a.add-on-item:hover .action-tag {
+    background-color: var(--signal-green) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--signal-green);
+    border-color: var(--signal-green) !important;
+}
+
+/* 2. Optional: Light up the text and border of the row slightly */
+a.add-on-item:hover {
+    background: rgba(74, 222, 128, 0.05) !important;
+    border-color: var(--signal-green) !important;
+    transition: 0.3s ease;
+}
+
+/* 3. Ensure the action tag has a smooth transition */
+.action-tag {
+    transition: 0.3s ease !important;
+}
