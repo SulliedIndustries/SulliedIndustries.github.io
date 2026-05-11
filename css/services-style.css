@@ -116,3 +116,20 @@ a:hover .bunker-note {
 a .bunker-note ul {
     color: #ccc;
 }
+
+/* --- WEBSITE BOX FULL HIGHLIGHT FIX --- */
+
+/* 1. Force all four borders to appear and glow green on hover */
+a:hover .bunker-note {
+    border: 1px solid var(--signal-green) !important; /* Changes from left-only to all sides */
+    background: #141815 !important;
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.2); /* Optional: adds a subtle outer glow */
+    transition: 0.3s ease;
+}
+
+/* 2. Ensure the internal button still lights up */
+a:hover .bunker-note .login-btn {
+    background-color: var(--signal-green) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--signal-green);
+}
