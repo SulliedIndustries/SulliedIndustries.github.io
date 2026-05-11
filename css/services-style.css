@@ -298,3 +298,20 @@ a.add-on-item:hover {
     max-width: 860px !important;
     margin: 40px auto !important;
 }
+
+/* --- FINAL SPACING & HOVER SYNC --- */
+
+.featured-tier:hover {
+    border-color: var(--signal-green) !important;
+    background: #141815 !important;
+    transform: translateY(-5px) !important;
+}
+
+/* Ensures the description text stays legible against the dark background */
+.featured-tier p {
+    transition: color 0.3s ease;
+}
+
+.featured-tier:hover p {
+    color: #fff !important;
+}
