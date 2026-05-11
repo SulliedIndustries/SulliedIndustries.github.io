@@ -327,3 +327,26 @@ a[href*="service=website"] .bunker-note {
 a[href*="service=website"] .login-btn {
     align-self: center;
 }
+
+/* --- GRID BOX MATH FIX --- */
+
+.pricing-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+
+.tier-card {
+    /* (1000px total width - 50px total gaps) / 3 cards = 316.6px */
+    width: 316px !important;
+    flex: 0 0 316px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Fixes any potential overflow from the main container */
+div[style*="width: 1000px"] {
+    box-sizing: border-box !important;
+}
