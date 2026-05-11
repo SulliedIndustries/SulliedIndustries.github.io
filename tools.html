@@ -7,15 +7,7 @@
     <link rel="stylesheet" href="css/tools-style.css"> 
 </head>
 <body>
-<div id="nav-placeholder"></div>
-
-<script>
-    fetch('nav.html')
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById('nav-placeholder').innerHTML = data;
-        });
-</script>
+    <div id="nav-placeholder"></div>
 
     <header style="text-align: center; margin-top: 50px;">
         <h1 style="letter-spacing: 5px; color: var(--signal-green);">OPERATIONAL TOOLS</h1>
@@ -49,7 +41,7 @@
                     <span>COMPLEX: [■■■□□]</span>
                     <span>BEGINNER: [■■■■■]</span>
                 </div>
-                <a href="YOUR_GOOGLE_FORM_LINK" class="log-btn">ADD LOG ENTRY</a>
+                <a href="#" class="log-btn">ADD LOG ENTRY</a>
             </div>
         </div>
 
@@ -73,13 +65,18 @@
                     <span>COMPLEX: [■■■■□]</span>
                     <span>BEGINNER: [■■■□□]</span>
                 </div>
-                <a href="YOUR_GOOGLE_FORM_LINK" class="log-btn">ADD LOG ENTRY</a>
+                <a href="#" class="log-btn">ADD LOG ENTRY</a>
             </div>
         </div>
 
     </div>
 
     <script>
+        // Inject Nav
+        fetch('nav.html').then(res => res.text()).then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+
         // Search Filter Logic
         function filterTools() {
             let input = document.getElementById('toolSearch').value.toLowerCase();
@@ -89,13 +86,6 @@
                 cards[i].style.display = content.includes(input) ? "grid" : "none";
             }
         }
-
-        // Mobile Nav Logic
-        function toggleMenu() {
-            const nav = document.getElementById('navLinks');
-            nav.classList.toggle('active');
-        }
     </script>
-
 </body>
 </html>
