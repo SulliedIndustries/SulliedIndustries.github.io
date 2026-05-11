@@ -242,3 +242,83 @@ body {
     padding: 2px 8px;
     margin-left: 15px;
 }
+
+/* Navigation Container */
+.top-nav {
+    display: flex;
+    justify-content: space-between; /* Pushes links left, brand right */
+    align-items: center;
+    padding: 10px 40px;
+    background: #000;
+    border-bottom: 1px solid #2d3b2d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Links Group */
+.nav-links a {
+    margin-right: 25px;
+    text-decoration: none;
+    color: #888;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--signal-green);
+}
+
+/* Brand Group */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-name {
+    font-size: 0.9em;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.nav-sigil {
+    height: 30px; /* Adjust based on your image size */
+    filter: grayscale(1) brightness(0.8);
+}
+
+/* --- MOBILE STYLES --- */
+.menu-icon {
+    display: none; /* Hidden on desktop */
+    font-size: 1.5em;
+    color: var(--signal-green);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show menu button on phone */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on phone */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        padding: 20px;
+        border-bottom: 1px solid #2d3b2d;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when "active" class is added */
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 1.1em;
+    }
+}
