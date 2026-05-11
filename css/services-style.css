@@ -95,3 +95,24 @@ a.tier-card:hover, a.featured-tier:hover {
     border-color: var(--signal-green) !important;
     background: #141815 !important;
 }
+
+/* --- WEBSITE BOX HOVER REPAIR --- */
+
+/* 1. Make the button inside the website box light up */
+a:hover .bunker-note .login-btn {
+    background-color: var(--signal-green) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--signal-green);
+}
+
+/* 2. Make the website box border light up on hover */
+a:hover .bunker-note {
+    border-color: var(--signal-green) !important;
+    background: #141815 !important;
+    transition: 0.3s ease;
+}
+
+/* 3. Ensure the list text doesn't change color like a link */
+a .bunker-note ul {
+    color: #ccc;
+}
