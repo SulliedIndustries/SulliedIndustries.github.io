@@ -7,18 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="nav-placeholder"></div>
 
-    <nav class="top-nav">
-        <div class="nav-brand">
-            <span class="brand-name">SULLIED INDUSTRIES</span>
-        </div>
-        <div class="nav-links">
-            <a href="index.html">HOME</a>
-            <a href="artists.html">ROSTER</a>
-            <a href="tools.html">TOOLS</a>
-            <a href="contact.html">INTAKE</a>
-        </div>
-    </nav>
+<script>
+    fetch('nav.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+</script>
 
     <header class="page-header">
         <h1>COMMISSARY</h1>
