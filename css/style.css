@@ -342,33 +342,29 @@ body {
     overflow-x: hidden; /* Prevents awkward side-scrolling */
 }
 
-/* THE GRID CONTAINER */
+/* THE OUTER CONTAINER */
 #toolsGrid {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Force entries to stack like a list */
     gap: 30px;
-    width: 90%;
-    max-width: 1200px; 
+    width: 95%;
+    max-width: 1200px;
     margin: 40px auto;
 }
 
-/* THE INDIVIDUAL ENTRIES (This is what needs the border) */
+/* THE INDIVIDUAL BOX */
 .tool-entry {
     display: grid;
-    /* Forces the three-column layout we see in your screenshot */
-    grid-template-columns: 1fr 1.5fr 1fr; 
+    /* This defines the three columns: Left, Middle (stretches), Right */
+    grid-template-columns: 280px 1fr 240px; 
     gap: 40px;
-    background: rgba(0, 0, 0, 0.3);
-    
-    /* THE FIX: Move the border and padding here */
-    border: 1px solid #2d3b2d; 
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #2d3b2d; /* This will now wrap all 3 columns */
     padding: 30px;
-    
     width: 100%;
-    box-sizing: border-box; /* Keeps the border at the absolute edge */
+    box-sizing: border-box;
     align-items: start;
 }
-
 /* REMOVE borders from internal sections */
 /* If you have a border on .entry-identity, delete it! */
 .entry-identity {
