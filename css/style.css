@@ -334,27 +334,37 @@ body {
     }
 }
 
-/* Ensure the main container actually fills the screen space */
+/* Ensure the body itself isn't squishing the site */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Takes up 100% of the Viewport Width */
+    overflow-x: hidden; /* Prevents awkward side-scrolling */
+}
+
+/* THE GRID CONTAINER */
 #toolsGrid {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 95%; /* Occupy almost full width */
-    max-width: 1200px; /* But don't get TOO wide on massive monitors */
-    margin: 40px auto;
+    gap: 20px;
+    width: 90%;          /* Uses 90% of the screen width */
+    max-width: 1400px;   /* Sets a massive upper limit for ultra-wide screens */
+    margin: 40px auto;   /* Centers the 90% block */
+    padding: 0;          /* Removes any internal padding that might be squishing children */
 }
 
+/* THE INDIVIDUAL ENTRIES */
 .tool-entry {
     display: grid;
-    /* We use 'auto' for the sides and '1fr' for the middle to let it grow */
-    grid-template-columns: 250px 1fr 220px; 
-    gap: 30px;
+    /* Identity (Left) | Review (Middle - Grows) | Specs (Right) */
+    grid-template-columns: 300px 1fr 250px; 
+    gap: 40px;           /* Gives the sections room to breathe */
+    width: 100%;         /* Forces the entry to fill the 90% container */
     background: #0a0c0b;
     border: 1px solid #2d3b2d;
-    padding: 25px;
-    align-items: center; /* Centers things vertically for a cleaner look */
-    width: 100%;
-    box-sizing: border-box; /* CRITICAL: Includes padding in the width calculation */
+    padding: 30px;       /* Adds internal padding for the text */
+    box-sizing: border-box; /* Includes padding in the 100% width */
+    align-items: start;
 }
 
 /* Section 1 Adjustments */
