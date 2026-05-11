@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sullied Industries | Legal & Protocol</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/legal-style.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <main class="legal-container">
+        <h1>SYSTEM_PROTOCOLS</h1>
+        <p>Transparency regarding data handling, service terms, and operational architecture.</p>
+
+        <section class="protocol-section">
+            <div class="bunker-note">
+                <h3>DATA_PIPELINE & TECH_STACK</h3>
+                <p>To maintain project integrity, the following third-party applications are utilized for file handling and distribution:</p>
+                <ul class="tech-list">
+                    <li><strong>FILE_TRANSFER:</strong> [Insert App e.g., WeTransfer / Google Drive]</li>
+                    <li><strong>DAW_ENVIRONMENT:</strong> [Insert DAW e.g., Ableton / FL Studio]</li>
+                    <li><strong>DISTRIBUTION_GATEWAY:</strong> RouteNote</li>
+                    <li><strong>HOSTING_INFRASTRUCTURE:</strong> GitHub Systems</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="protocol-section">
+            <h3>SERVICE_AGREEMENT_PREVIEW</h3>
+            <p>Review the standard sign-on contract before initiating contact.</p>
+            <div class="contract-viewer">
+                <h4>SULLIED INDUSTRIES SERVICE AGREEMENT</h4>
+                <p>1. SCOPE OF WORK: The Engineer shall provide production/mixing services as defined in the project quote...</p>
+                <p>2. ROYALTY DISCLOSURE: Sullied Industries operates on a 0% royalty-share model. All earnings remain with the Artist...</p>
+                <p>3. SOLE OPERATOR PROTOCOL: This is a manual workflow. Turnaround times are estimates and may vary...</p>
+                <p>4. DATA RETENTION: Files are stored for [X] days following project completion...</p>
+                </div>
+        </section>
+
+        <section class="action-section">
+            <p class="system-alert">[SYSTEM NOTE: Clicking below will download a .PDF copy to your local device]</p>
+            <div class="button-row">
+                <a href="files/Sullied_Contract.pdf" download class="login-btn">DOWNLOAD_CONTRACT</a>
+                <a href="files/Technical_Specs.pdf" download class="login-btn">DOWNLOAD_TECH_SPECS</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        fetch('nav.html').then(res => res.text()).then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
