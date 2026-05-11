@@ -1,0 +1,70 @@
+/* --- LEGAL & PROTOCOL STYLING --- */
+
+.legal-container {
+    width: 1000px;
+    max-width: 95%;
+    margin: 60px auto;
+    text-align: left;
+}
+
+.protocol-section {
+    margin-bottom: 50px;
+}
+
+/* Tech List Styling */
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.tech-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+    font-family: monospace;
+    font-size: 0.95em;
+    color: #ccc;
+}
+
+.tech-list li strong {
+    color: var(--signal-green);
+    margin-right: 15px;
+}
+
+/* Scrollable Contract Viewer */
+.contract-viewer {
+    background: #0d0f0e;
+    border: 1px solid #333;
+    padding: 40px;
+    height: 400px;
+    overflow-y: scroll;
+    color: #aaa;
+    font-size: 0.9em;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.contract-viewer h4 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+/* Download Section */
+.system-alert {
+    color: #666;
+    font-size: 0.8em;
+    font-family: monospace;
+    margin-bottom: 15px;
+}
+
+.button-row {
+    display: flex;
+    gap: 20px;
+}
+
+.action-section {
+    padding: 40px 0;
+    border-top: 1px dashed #333;
+}
