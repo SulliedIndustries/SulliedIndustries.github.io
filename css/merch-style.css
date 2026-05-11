@@ -1,1 +1,124 @@
+/* --- COMMISSARY / MERCH STYLES --- */
 
+.page-header {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+#merchGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto 100px auto;
+}
+
+.merch-entry {
+    display: grid;
+    /* Visual: 300px | Intel: Flexible | Status: 250px */
+    grid-template-columns: 300px 1fr 250px;
+    gap: 40px;
+    background: rgba(10, 12, 11, 0.6);
+    border: 1px solid #2d3b2d;
+    padding: 30px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* Section 1: The Product Image Area */
+.merch-visual {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: #050505;
+    border: 1px dashed #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.visual-placeholder {
+    color: #222;
+    font-size: 0.7em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* Section 2: Product Info */
+.merch-intel {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-size: 1.8em;
+    margin: 0 0 10px 0;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.item-desc {
+    font-size: 0.9em;
+    color: #888;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* Section 3: Pricing & Button */
+.merch-status {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #fff;
+    font-family: monospace;
+}
+
+.status-badge {
+    color: #ff3e3e;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.action-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid #333;
+    color: #444;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8em;
+    pointer-events: none; /* Keeps it unclickable */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mobile Fix */
+@media (max-width: 900px) {
+    .merch-entry {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .merch-intel { align-items: center; }
+    .merch-status { text-align: center; align-items: center; }
+    .merch-visual { max-width: 250px; margin: 0 auto; }
+}
