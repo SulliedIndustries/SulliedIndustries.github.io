@@ -9,10 +9,18 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Courier New', monospace; /* Keeps the technical/typewriter feel */
+    font-family: 'Courier New', monospace;
     line-height: 1.6;
     padding: 40px;
     margin: 0;
+
+    /* --- THE CENTERING MAGIC --- */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* This makes the "center" the middle of the whole screen */
+    text-align: center;
 }
 
 h1 {
@@ -48,23 +56,6 @@ a {
 a:hover {
     text-decoration: underline;
     color: #fff;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Courier New', monospace;
-    line-height: 1.6;
-    padding: 40px;
-    margin: 0;
-
-    /* --- THE CENTERING MAGIC --- */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* This makes the "center" the middle of the whole screen */
-    text-align: center;
 }
 
 /* --- SERVICES & PRICING GRID --- */
