@@ -395,3 +395,11 @@ body {
         width: 100%;
     }
 }
+
+/* RESPONSIVE: Stack on Mobile */
+@media (max-width: 768px) {
+    .tool-entry {
+        grid-template-columns: 1fr; /* Changes from 3 columns to 1 */
+        gap: 25px;
+    }
+}
