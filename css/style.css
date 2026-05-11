@@ -368,14 +368,11 @@ body {
 }
 
 /* Section 1 Adjustments */
-.entry-identity .tag {
-    display: inline-block;
-    color: var(--signal-green);
-    font-size: 0.65em;
-    letter-spacing: 2px;
-    border: 1px solid var(--signal-green);
-    padding: 2px 6px;
-    margin-bottom: 12px;
+.entry-identity {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .tool-name {
