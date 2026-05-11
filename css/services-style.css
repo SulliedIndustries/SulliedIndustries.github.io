@@ -1,68 +1,52 @@
-/* --- SERVICES & PRICING GRID --- */
-.pricing-grid {
-    display: flex;
-    flex-wrap: wrap;
+/* --- SERVICES GRID LOGIC --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    justify-content: center;
-    margin: 30px 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
-.featured-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.featured-tier {
-    flex: 1 0 100%;
-    width: 100% !important;
-    max-width: 860px;
-    flex-direction: row !important;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-    border: 2px solid var(--accent-green);
-    box-sizing: border-box;
-}
-
-.tier-card {
-    background: #0d0f0e;
+.service-card {
+    background: rgba(10, 12, 11, 0.8);
     border: 1px solid #2d3b2d;
-    padding: 20px;
-    width: 260px;
+    padding: 30px;
     text-align: left;
-    transition: 0.3s ease;
-    display: flex;
-    flex-direction: column;
+    transition: 0.3s;
 }
 
-.tier-card:hover {
+.service-card:hover {
     border-color: var(--signal-green);
-    transform: translateY(-5px);
-    background: #141815;
+    transform: translateY(-5px); /* Subtle lift effect */
 }
 
-.tier-content {
-    display: flex;
-    flex-direction: column;
-    min-width: 220px;
+.service-card h3 {
+    color: var(--signal-green);
+    letter-spacing: 2px;
+    margin-bottom: 15px;
 }
 
-.tier-price {
-    font-size: 1.8em;
-    color: #fff;
-    margin: 10px 0;
-    font-family: monospace;
+.service-card p {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 25px;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .featured-tier {
-        flex-direction: column !important;
-        text-align: center;
-    }
-    .tier-card {
-        width: 90%;
-    }
+/* The Button Styling */
+.service-btn {
+    display: inline-block;
+    background-color: var(--signal-green);
+    color: #000 !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    border: 1px solid var(--signal-green);
+}
+
+.service-btn:hover {
+    background: transparent;
+    color: var(--signal-green) !important;
 }
