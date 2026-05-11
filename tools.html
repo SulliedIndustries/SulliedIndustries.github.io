@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sullied Industries | Tools</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        </nav>
+
+    <h1>OPERATIONAL TOOLS</h1>
+    <p>Resources for the independent architect. Built by the community.</p>
+
+    <div class="tool-controls" style="max-width: 860px; margin: 20px auto; display: flex; gap: 10px;">
+        <input type="text" id="toolSearch" placeholder="SEARCH SYSTEM (e.g. 'Distribution', 'AI', 'Editing')..." onkeyup="filterTools()" style="flex: 1; padding: 10px; background: #000; border: 1px solid var(--signal-green); color: #fff; font-family: monospace;">
+        <a href="contact.html?service=toolsuggest" class="login-btn" style="padding: 10px;">[+] SUGGEST TOOL</a>
+    </div>
+
+    <div class="tools-grid" id="toolsGrid" style="max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+        
+        <div class="tool-card" data-category="conversion editing">
+            <h3>CloudConvert</h3>
+            <span class="tag">CONVERSION</span>
+            <p>Perfect for hitting RouteNote's strict 16-bit/44.1kHz FLAC requirements.</p>
+            <div class="review-section">
+                <p class="user-review">"Saved my life when DistroKid rejected my 48kHz WAVs." - K_KAYE</p>
+            </div>
+            <a href="https://cloudconvert.com" target="_blank" class="bunker-note">[ ACCESS TOOL ]</a>
+        </div>
+
+        <div class="tool-card" data-category="visuals editing">
+            <h3>Photopea</h3>
+            <span class="tag">VISUALS</span>
+            <p>Browser-based Photoshop. Essential for fixing CMYK color profile errors.</p>
+            <div class="review-section">
+                <p class="user-review">"Best free way to resize art to 3000x3000px." - Admin</p>
+            </div>
+            <a href="https://photopea.com" target="_blank" class="bunker-note">[ ACCESS TOOL ]</a>
+        </div>
+
+    </div>
+
+    <script>
+    function filterTools() {
+        let input = document.getElementById('toolSearch').value.toLowerCase();
+        let cards = document.getElementsByClassName('tool-card');
+
+        for (let i = 0; i < cards.length; i++) {
+            let content = cards[i].innerText.toLowerCase() + cards[i].getAttribute('data-category');
+            if (content.includes(input)) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
