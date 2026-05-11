@@ -241,3 +241,26 @@ body {
         padding-top: 100px; /* Gives more room for the nav bar on small screens */
     }
 }
+
+/* This makes the featured card span the entire top row */
+.featured-tier {
+    width: 100% !important; /* Forces it to be full width */
+    max-width: 820px; /* Adjust this to match the total width of the 3 cards below */
+    flex-direction: row !important; /* Puts the text and price side-by-side */
+    align-items: center;
+    gap: 30px;
+}
+
+/* This keeps the text inside the featured card looking clean */
+.featured-tier p {
+    margin: 0;
+    max-width: 400px; /* Keeps the description from stretching too far and getting hard to read */
+}
+
+/* On phones, we want it to go back to being a normal box */
+@media (max-width: 768px) {
+    .featured-tier {
+        flex-direction: column !important;
+        text-align: center;
+    }
+}
