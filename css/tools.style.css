@@ -1,1 +1,153 @@
+/* The Search and Suggest Bar Row */
+.tool-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 20px;
+}
 
+#toolSearch {
+    flex: 1; /* Takes up remaining space */
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #2d3b2d;
+    color: #fff;
+    font-family: monospace;
+    transition: 0.3s;
+}
+
+#toolSearch:focus {
+    outline: none;
+    border-color: var(--signal-green);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.1);
+}
+
+/* The Main Container for Rows */
+#toolsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+/* The 3-Section Entry Box */
+.tool-entry {
+    display: grid;
+    /* Identity: 280px | Review: Flexible | Stats: 240px */
+    grid-template-columns: 280px 1fr 240px; 
+    gap: 40px;
+    background: rgba(10, 12, 11, 0.6);
+    border: 1px solid #2d3b2d;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures border stays at the edge */
+    align-items: start;
+    transition: 0.3s ease;
+}
+
+.tool-entry:hover {
+    border-color: var(--signal-green);
+    background: rgba(57, 255, 20, 0.02);
+}
+
+/* Section 1: Identity & Tag */
+.entry-identity {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.entry-identity .tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.65em;
+    color: var(--signal-green);
+    border: 1px solid var(--signal-green);
+    padding: 2px 8px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.tool-name {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+
+.tool-desc {
+    font-size: 0.85em;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* Section 2: Review Content */
+.user-review {
+    font-size: 1em;
+    font-style: italic;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+    border-left: 2px solid #2d3b2d;
+    padding-left: 15px;
+}
+
+.review-author {
+    font-size: 0.75em;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+/* Section 3: Stat Bars & Button */
+.stat-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: monospace;
+    font-size: 0.8em;
+    color: var(--signal-green);
+}
+
+.stat-group span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.log-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #444;
+    color: #888;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.75em;
+    transition: 0.2s;
+}
+
+.log-btn:hover {
+    background: var(--signal-green);
+    color: #000;
+    border-color: var(--signal-green);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .tool-entry {
+        grid-template-columns: 1fr; /* Stack into 1 column */
+        gap: 30px;
+    }
+    
+    .tool-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #toolSearch {
+        width: 100%;
+    }
+}
