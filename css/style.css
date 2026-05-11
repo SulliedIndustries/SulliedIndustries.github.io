@@ -226,3 +226,18 @@ body {
 body {
     padding-top: 80px !important; 
 }
+
+/* Responsive adjustment for small screens (Chromebooks/Phones) */
+@media (max-width: 768px) {
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tier-card {
+        width: 90%; /* Makes the card take up most of the screen width on mobile */
+        max-width: 400px;
+    }
+    body {
+        padding-top: 100px; /* Gives more room for the nav bar on small screens */
+    }
+}
