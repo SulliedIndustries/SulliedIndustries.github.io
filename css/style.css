@@ -333,3 +333,35 @@ body {
         width: 100%;
     }
 }
+
+.review-section {
+    background: #050505;
+    border-left: 2px solid var(--signal-green);
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 0.8em;
+}
+
+.user-review {
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.stat-bar {
+    color: var(--signal-green);
+    font-family: monospace;
+}
+
+.review-trigger {
+    font-size: 0.7em;
+    color: #444;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.review-trigger:hover {
+    color: var(--signal-green);
+}
