@@ -347,7 +347,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 90%;          /* Uses 90% of the screen width */
+    width: 98%;          /* Uses 90% of the screen width */
     max-width: 1400px;   /* Sets a massive upper limit for ultra-wide screens */
     margin: 40px auto;   /* Centers the 90% block */
     padding: 0;          /* Removes any internal padding that might be squishing children */
@@ -392,7 +392,7 @@ body {
 }
 
 /* Responsive Fix */
-@media (max-width: 900px) {
+@media (max-width: 100%) {
     .tool-entry {
         grid-template-columns: 1fr; /* Stacks vertically on smaller tablets/phones */
         text-align: left;
