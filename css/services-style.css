@@ -196,3 +196,34 @@ a.add-on-item:hover {
     box-sizing: border-box;
     background: #0d0f0e;
 }
+
+/* --- THE PERFECT GRID LAYOUT --- */
+
+/* 1. Center everything and set a fixed container width */
+.featured-row, .pricing-grid {
+    width: 1000px !important; /* Math: (300*3) + (50*2) */
+    max-width: 95% !important;
+    margin: 0 auto !important;
+    display: flex !important;
+}
+
+/* 2. Fix the Ignition Box (Top 1/4th) */
+.featured-tier {
+    width: 100% !important;
+    max-width: 1000px !important;
+    margin-bottom: 50px !important; /* Matches the gap between cards below */
+    box-sizing: border-box;
+}
+
+/* 3. Fix the 3 Cards (Bottom 3/4th) */
+.pricing-grid {
+    flex-direction: row !important;
+    justify-content: space-between !important; /* Pushes cards to the absolute edges */
+    gap: 0px !important; /* We use space-between instead for precision */
+}
+
+.tier-card {
+    width: 300px !important; /* Fixed width */
+    margin: 0 !important;
+    box-sizing: border-box;
+}
