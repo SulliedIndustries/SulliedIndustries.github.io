@@ -181,3 +181,31 @@ body {
         width: 90%;
     }
 }
+
+.intake-form {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.intake-form label {
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    color: var(--signal-green);
+}
+
+.intake-form input, .intake-form select, .intake-form textarea {
+    background: #0a0c0b;
+    border: 1px solid #2d3b2d;
+    color: #fff;
+    padding: 10px;
+    font-family: monospace;
+}
+
+.intake-form input:focus {
+    outline: none;
+    border-color: var(--signal-green);
+}
