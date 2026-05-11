@@ -281,3 +281,20 @@ a.add-on-item:hover {
     border-color: var(--signal-green) !important;
     transform: translateY(-5px) !important;
 }
+
+/* --- RESET SECTIONS BELOW GRID --- */
+
+.bunker-note {
+    clear: both !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 860px !important;
+    margin: 30px auto !important;
+}
+
+.system-footer {
+    clear: both !important;
+    width: 100% !important;
+    max-width: 860px !important;
+    margin: 40px auto !important;
+}
