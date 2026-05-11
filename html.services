@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav class="top-nav">
+        <a href="index.html">HOME</a>
+        <a href="artists.html">ROSTER</a>
+        <a href="services.html">SERVICES</a>
+        <a href="#" class="nav-login">LOG IN</a>
+    </nav>
     <h1>LOGISTICS ARCHITECTURE</h1>
     <p>Professional administration for the independent artist. No middle-man headaches.</p>
 
