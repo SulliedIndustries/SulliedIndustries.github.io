@@ -113,29 +113,6 @@ body {
     transition: 0.3s; /* Makes the glow fade in smoothly */
 }
 
-.service-card {
-    background: #0d0f0e;
-    border: 1px solid #333;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 600px;
-    text-align: left;
-}
-
-.service-card h3 {
-    color: var(--signal-green);
-    margin-top: 0;
-}
-
-.price {
-    display: block;
-    font-weight: bold;
-    color: #fff;
-    margin: 10px 0;
-    font-size: 1.2em;
-    font-family: monospace;
-}
-
 /* --- SERVICES & PRICING GRID --- */
 .pricing-grid {
     display: flex;
@@ -143,6 +120,25 @@ body {
     gap: 20px;
     justify-content: center;
     margin: 30px 0;
+}
+
+.featured-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.featured-tier {
+    flex: 1 0 100%;
+    width: 100% !important;
+    max-width: 860px;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border: 2px solid var(--accent-green);
+    box-sizing: border-box;
 }
 
 .tier-card {
@@ -162,11 +158,10 @@ body {
     background: #141815;
 }
 
-.tier-card h3 {
-    color: var(--signal-green);
-    margin-top: 0;
-    font-size: 1.2em;
-    letter-spacing: 1px;
+.tier-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
 }
 
 .tier-price {
@@ -176,100 +171,13 @@ body {
     font-family: monospace;
 }
 
-.tier-card p {
-    font-size: 0.9em;
-    color: #a3a3a3;
-    flex-grow: 1; /* Keeps the cards the same height */
-}
-
-/* Responsive adjustment for small screens */
-@media (max-width: 600px) {
-    .tier-card {
-        width: 100%;
-    }
-}
-
-/* --- TOP NAVIGATION BAR --- */
-.top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(10, 12, 11, 0.95); /* Slight transparency */
-    border-bottom: 1px solid var(--accent-green);
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-    z-index: 1000; /* Keeps it above everything else */
-}
-
-.top-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 0.8em;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-.top-nav a:hover {
-    color: var(--signal-green);
-}
-
-.nav-login {
-    border: 1px solid var(--signal-green);
-    padding: 2px 10px;
-    border-radius: 3px;
-}
-
-/* Add this to prevent your content from hiding under the fixed bar */
-body {
-    padding-top: 80px !important; 
-}
-
-/* Responsive adjustment for small screens (Chromebooks/Phones) */
-@media (max-width: 768px) {
-    .pricing-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .tier-card {
-        width: 90%; /* Makes the card take up most of the screen width on mobile */
-        max-width: 400px;
-    }
-    body {
-        padding-top: 100px; /* Gives more room for the nav bar on small screens */
-    }
-}
-
-/* This container forces the 100% width and centers the card */
-.featured-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.featured-tier {
-    width: 100%;
-    max-width: 860px; /* This makes it match the width of the 3 cards below */
-    flex-direction: row !important;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-    border: 2px solid var(--accent-green);
-}
-
-/* This keeps the Title and Price grouped together on the left */
-.tier-content {
-    display: flex;
-    flex-direction: column;
-    min-width: 200px;
-}
-
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .featured-tier {
         flex-direction: column !important;
         text-align: center;
+    }
+    .tier-card {
+        width: 90%;
     }
 }
