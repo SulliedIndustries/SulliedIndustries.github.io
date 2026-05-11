@@ -306,3 +306,24 @@ a.add-on-item:hover {
     max-width: 860px !important;
     margin: 40px auto !important;
 }
+
+/* --- WEB BOX CENTERING REPAIR --- */
+
+.bunker-note {
+    display: block !important;
+    clear: both !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Forces the Web Architecture section to match the top box width */
+a[href*="service=website"] .bunker-note {
+    max-width: 1000px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Fixes the button spacing inside the web box */
+a[href*="service=website"] .login-btn {
+    align-self: center;
+}
