@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sullied Industries | Intake</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html">HOME</a>
+        <a href="artists.html">ROSTER</a>
+        <a href="services.html">SERVICES</a>
+    </nav>
+
+    <h1>SERVICE INTAKE FORM</h1>
+    
+    <form action="https://api.web3forms.com/submit" method="POST" class="intake-form">
+        
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        
+        <label>ARTIST NAME</label>
+        <input type="text" name="artist_name" required placeholder="K_KAYE">
+
+        <label>REQUESTED SERVICE</label>
+        <select name="service_type">
+            <option value="ignition">The Ignition Bundle</option>
+            <option value="standard">Standard Retainer</option>
+            <option value="premium">Premium Retainer</option>
+            <option value="single">Single Release</option>
+            <option value="visuals">Visual Processing</option>
+        </select>
+
+        <label>PROJECT DETAILS / LINKS</label>
+        <textarea name="message" rows="5" placeholder="List your social handles or the song title you want to release..."></textarea>
+
+        <label>YOUR CONTACT EMAIL</label>
+        <input type="email" name="email" required placeholder="artist@email.com">
+
+        <button type="submit" class="login-btn">TRANSMIT DATA</button>
+    </form>
+</body>
+</html>
