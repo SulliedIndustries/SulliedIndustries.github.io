@@ -254,6 +254,12 @@ body {
     box-sizing: border-box; /* Makes sure padding doesn't mess up the width */
 }
 
+/* This keeps the text inside the featured card looking clean */
+.featured-tier p {
+    margin: 0;
+    max-width: 400px; /* Keeps the description from stretching too far and getting hard to read */
+}
+
 /* On phones, we want it to go back to being a normal box */
 @media (max-width: 768px) {
     .featured-tier {
