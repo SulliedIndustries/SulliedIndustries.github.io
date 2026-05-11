@@ -33,29 +33,62 @@
 
     <div class="tools-grid" id="toolsGrid" style="max-width: 98%; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
         
+   <div class="tools-grid" id="toolsGrid">
+    
     <div class="tool-entry" data-category="conversion editing">
+        
         <div class="entry-identity">
             <span class="tag">CONVERSION</span>
             <h3 class="tool-name">CloudConvert</h3>
             <p class="tool-desc">The primary engine for audio spec compliance and format shifting.</p>
         </div>
-     </div>
 
-    <div class="entry-context">
-        <div class="top-review">
-            <p class="user-review">"The only thing that reliably hits the 16-bit/44.1kHz target every time."</p>
-            <span class="review-author">— K_KAYE</span>
+        <div class="entry-context">
+            <div class="top-review">
+                <p class="user-review">"The only thing that reliably hits the 16-bit/44.1kHz target every time."</p>
+                <span class="review-author">— K_KAYE</span>
+            </div>
         </div>
-    </div>
 
-    <div class="entry-log">
-        <div class="stat-group">
-            <span>OVERALL: [■■■■□]</span>
-            <span>COMPLEX: [■■■□□]</span>
-            <span>BEGINNER: [■■■■■]</span>
+        <div class="entry-log">
+            <div class="stat-group">
+                <span>OVERALL: [■■■■□]</span>
+                <span>COMPLEX: [■■■□□]</span>
+                <span>BEGINNER: [■■■■■]</span>
+            </div>
+            <a href="YOUR_GOOGLE_FORM_LINK" class="log-btn">ADD LOG ENTRY</a>
         </div>
-        <a href="YOUR_GOOGLE_FORM_LINK" class="log-btn">ADD LOG ENTRY</a>
-    </div>
+
+    </div> </div> ```
+
+---
+
+### **The CSS Fix (Update the Grid Logic)**
+
+Also, in your snippet, the `tools-grid` is still using `repeat(auto-fill, minmax(250px, 1fr))`. That is for small square cards. Since we want **wide rows**, we should change that to a simple column layout.
+
+Update your CSS to this:
+
+```css
+#toolsGrid {
+    display: flex;
+    flex-direction: column; /* Force them to be rows, not cards */
+    gap: 30px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tool-entry {
+    display: grid;
+    /* This defines the three columns inside the box */
+    grid-template-columns: 1fr 1.5fr 1fr; 
+    gap: 30px;
+    border: 1px solid #2d3b2d; /* Now this will wrap everything! */
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: start;
+}
 </div>
         
     <script>
