@@ -73,3 +73,25 @@
     border: 1px solid #2d3b2d !important;
     background: #0d0f0e !important;
 }
+
+/* --- BUTTON HOVER REPAIR --- */
+
+/* 1. Make the small login-btn light up when the whole box is hovered */
+a.tier-card:hover .login-btn, 
+a.featured-tier:hover .login-btn,
+a:hover .login-btn {
+    background-color: var(--signal-green) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--signal-green);
+}
+
+/* 2. Ensure the text inside the box doesn't turn blue like a standard link */
+a.tier-card, a.featured-tier {
+    text-decoration: none !important;
+}
+
+/* 3. Add a slight border glow to the boxes themselves on hover */
+a.tier-card:hover, a.featured-tier:hover {
+    border-color: var(--signal-green) !important;
+    background: #141815 !important;
+}
