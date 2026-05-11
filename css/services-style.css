@@ -175,28 +175,6 @@ a.add-on-item:hover {
     transition: 0.3s ease !important;
 }
 
-/* --- UPDATED TOP BOX WIDTH --- */
-
-.featured-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 25px; /* Matches the gap of the grid below */
-}
-
-.featured-tier {
-    flex: 1 0 100%;
-    width: 100% !important;
-    max-width: 950px; /* This perfectly matches 3 cards + 2 gaps */
-    flex-direction: row !important;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-    border: 2px solid var(--accent-green);
-    box-sizing: border-box;
-    background: #0d0f0e;
-}
-
 /* --- THE PERFECT GRID LAYOUT --- */
 
 /* 1. Center everything and set a fixed container width */
