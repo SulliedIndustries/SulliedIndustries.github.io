@@ -67,52 +67,6 @@ body {
     text-align: center;
 }
 
-.artist-list h2 {
-    color: var(--signal-green);
-    margin-bottom: 5px;
-}
-
-.artist-list p {
-    font-size: 0.9em;
-    color: #888;
-}
-
-.artist-card {
-    display: flex; /* The magic line that puts them side-by-side */
-    align-items: center; /* Centers the text vertically with the photo */
-    gap: 20px; /* Space between the photo and the text */
-    background: #121513; /* Subtle dark background for the card */
-    padding: 15px;
-    border: 1px solid #2d3b2d;
-    margin-bottom: 20px;
-    max-width: 500px; /* Keeps it from stretching too wide */
-}
-
-.artist-thumb {
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* Keeps the photo from looking squashed */
-    border: 1px solid var(--signal-green);
-    filter: grayscale(30%);
-}
-
-/* This removes the blue underline from the whole card */
-.card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block; /* Makes the whole area clickable */
-    max-width: 500px;
-    margin-bottom: 20px;
-}
-
-/* This adds a "Glow" or "Highlight" when someone hovers over the box */
-.artist-card:hover {
-    border-color: var(--signal-green);
-    background-color: #1a1e1b; /* Slightly lighter forest black */
-    cursor: pointer;
-    transition: 0.3s; /* Makes the glow fade in smoothly */
-}
-
 /* --- SERVICES & PRICING GRID --- */
 .pricing-grid {
     display: flex;
