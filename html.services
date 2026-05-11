@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sullied Industries
-  Paid Services<title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Sullied Industries | Services</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>OPPERATIONAL SERVICES</h1>
-  <p>Direct support. No hidden fees.</p>
+    <h1>LOGISTICS ARCHITECTURE</h1>
+    <p>Professional administration for the independent artist. No middle-man headaches.</p>
 
-  <div class="service-card">
-    <h3>Artist Management Setup</h3>
-    <p>Distribution routing (RouteNote), brand identity, and social archetecture setup.</p>
-    <span class="price"$XX flat fee</span>
-    <div class="bunker-note"> Status: LIMITED</div>
-  <div>
+    <div class="pricing-grid">
+        <div class="tier-card">
+            <h3>The Single</h3>
+            <span class="tier-price">$XX</span>
+            <p>One track. Metadata setup, ISRC routing, and store delivery management.</p>
+            <div class="bunker-note">Status: OPEN</div>
+        </div>
 
-  <div class="service-card">
-    <h3>Visual Asset Design<h/3>
-    <p>Single art cover and branding photography editing.</p>
-    <span class="price">Contact for Quote</span>
-    <div class="bunker-note">Status: OPEN</div>
-  </div>
+        <div class="tier-card">
+            <h3>The Project</h3>
+            <span class="tier-price">$XX</span>
+            <p>Full EP or Album. Sequence management, credits audit, and gapless playback check.</p>
+            <div class="bunker-note">Status: OPEN</div>
+        </div>
 
-  <br>
-  >a href="mailto:sulliedindustries@gmail.com" class="login-btn">INQUIRE VIA ENCRYPTED MAIL</a>
-  <br><br>
-  <a href="index.html"> RETURN TO MAIN SYSTEM</a>
+        <div class="tier-card" style="border-color: var(--signal-green);">
+            <h3>System Retainer</h3>
+            <span class="tier-price">$XX/mo</span>
+            <p>Unlimited releases. Priority label support. Your personal manager for all active logistics.</p>
+            <div class="bunker-note">Status: ACTIVE</div>
+        </div>
+    </div>
+
+    <div class="bunker-note" style="max-width: 600px; margin: 20px auto; text-align: left;">
+        <strong>DISTRIBUTION POLICY:</strong> Sullied Industries takes 0% of your royalties. 
+        All projects are routed via RouteNote. Choose between 100% Royalty Retention (requires upfront store fee) 
+        or 85% Royalty Retention (zero upfront store fee).
+    </div>
+
+    <br>
+    <a href="mailto:your-sulliedindustries@gmail.com?subject=Service%20Inquiry" class="login-btn">REQUEST ASSISTANCE</a>
+    <br><br>
+    <a href="index.html">← RETURN TO MAIN SYSTEM</a>
 </body>
 </html>
