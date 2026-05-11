@@ -242,25 +242,31 @@ body {
     }
 }
 
-/* This makes the featured card span the entire top row */
+/* This container forces the 100% width and centers the card */
+.featured-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
 .featured-tier {
-    flex: 1 0 100%; /* This tells it: 'Grow to 100% and don't let anyone sit next to me' */
-    width: 100% !important;
-    max-width: 860px; /* Increased slightly to match the 3 cards below better */
+    width: 100%;
+    max-width: 860px; /* This makes it match the width of the 3 cards below */
     flex-direction: row !important;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between; /* Puts space between the title and the description */
-    gap: 30px;
-    box-sizing: border-box; /* Makes sure padding doesn't mess up the width */
+    padding: 25px;
+    border: 2px solid var(--accent-green);
 }
 
-/* This keeps the text inside the featured card looking clean */
-.featured-tier p {
-    margin: 0;
-    max-width: 400px; /* Keeps the description from stretching too far and getting hard to read */
+/* This keeps the Title and Price grouped together on the left */
+.tier-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
 }
 
-/* On phones, we want it to go back to being a normal box */
 @media (max-width: 768px) {
     .featured-tier {
         flex-direction: column !important;
