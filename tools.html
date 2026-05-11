@@ -7,20 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="nav-brand">
-            <img src="assets/sigil.png" alt="Sigil" class="nav-sigil">
-            <span class="brand-name">SULLIED INDUSTRIES</span>
-        </div>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html">HOME</a>
-            <a href="artists.html">ROSTER</a>
-            <a href="tools.html">TOOLS</a>
-            <a href="services.html">SERVICES</a>
-            <a href="contact.html">INTAKE</a>
-        </div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    </nav>
+<div id="nav-placeholder"></div>
+
+<script>
+    fetch('nav.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+</script>
 
     <header style="text-align: center; margin-top: 50px;">
         <h1 style="letter-spacing: 5px; color: var(--signal-green);">OPERATIONAL TOOLS</h1>
