@@ -7,123 +7,66 @@
     <link rel="stylesheet" href="css/services-style.css"> 
 </head>
 <body>
-<div id="nav-placeholder"></div>
+    <div id="nav-placeholder"></div>
 
-<script>
-    fetch('nav.html')
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById('nav-placeholder').innerHTML = data;
-        });
-</script>
-    
-    <h1>LOGISTICS & OPERATIONS</h1>
-    <p>Direct technical support for the independent artist. No labels, no royalties taken.</p>
+    <header style="text-align: center; margin: 60px 0 40px 0;">
+        <h1>LOGISTICS & OPERATIONS</h1>
+        <p style="color: #888; letter-spacing: 1px;">Direct technical support for the independent artist.</p>
+    </header>
 
     <div class="featured-row">
-        <a href="contact.html?service=intake" class="login-btn">ARTIST_INTAKE</a>
-        <a href="contact.html?service=tools" class="login-btn">IGNITION</a>        
-        <div class="tier-content">
-            <h3>The Ignition Bundle</h3>
-            <span class="tier-price">$125</span>
+        <div class="featured-tier" style="display: flex; background: #0d0f0e; border: 2px solid var(--signal-green); max-width: 900px; margin: 0 auto; padding: 30px; align-items: center; gap: 30px;">
+            <div class="tier-content" style="flex: 1; text-align: left;">
+                <span class="tag" style="border: 1px solid var(--signal-green); color: var(--signal-green); padding: 2px 8px; font-size: 0.7em;">RECOMMENDED</span>
+                <h3 style="font-size: 2em; margin: 10px 0;">The Ignition Bundle</h3>
+                <p style="color: #ccc; margin-bottom: 15px;">The ultimate launchpad. Includes Single release, Gmail setup, RouteNote architecture, and Artist Profile verification.</p>
+                <span class="tier-price" style="display: block; font-size: 2.5em; color: #fff;">$125</span>
+            </div>
+            <a href="contact.html?service=ignition" class="login-btn" style="padding: 20px 40px; font-size: 1.1em;">START_IGNITION</a>
         </div>
-        <p style="color: #ccc;">The ultimate launchpad. Includes your first Single release, Gmail setup, RouteNote architecture, and Artist Profile verification. I build the system, you keep the keys.</p>
-    </a>
-</div>
+    </div>
 
     <div class="pricing-grid">
-        <a href="contact.html?service=intake" class="login-btn">ARTIST_INTAKE</a>
-        <a href="contact.html?service=tools" class="login-btn">SUBSCRIBE</a>
         <div class="tier-card">
             <h3>Standard Retainer</h3>
             <span class="tier-price">$40/mo</span>
-            <p>Unlimited Singles & EPs. I handle all distribution logistics, metadata, and Smart Link generation for every release.</p>
-            
-            <a href="contact.html?service=standard" class="bunker-note" style="text-decoration: none; cursor: pointer;">[ REQUEST STANDARD ]</a>
+            <p>Unlimited Singles & EPs. I handle distribution logistics, metadata, and Smart Links.</p>
+            <a href="contact.html?service=standard" class="login-btn" style="margin-top: auto; text-align: center;">REQUEST_STANDARD</a>
         </div>
 
-    <div class="tier-card" style="border: 2px solid var(--signal-green);">
-        <h3>Premium Retainer</h3>
-        <span class="tier-price">$65/mo</span>
-        <p>Full LP support, monthly Metadata Maintenance, 2 Photo Edits, PRO/Copyright assistance, and <b>One Batch Website Update</b> per month.</p>
-        
-        <a href="contact.html?service=Premium" class="bunker-note" style="text-decoration: none; cursor: pointer;">[ REQUEST PREMIUM ]</a>
-    </div>
+        <div class="tier-card" style="border: 1px solid var(--signal-green);">
+            <h3>Premium Retainer</h3>
+            <span class="tier-price">$65/mo</span>
+            <p>Full LP support, Metadata Maintenance, 2 Photo Edits, and PRO/Copyright assistance.</p>
+            <a href="contact.html?service=premium" class="login-btn" style="margin-top: auto; text-align: center;">REQUEST_PREMIUM</a>
+        </div>
         
         <div class="tier-card">
             <h3>Project Rate</h3>
-            <span class="tier-price">$15 - $75</span>
-            <p>A la carte distribution. Singles start at $15. EPs start at $30. Full LPs start at $50. No long-term commitment.</p>
-
-            <a href="contact.html?service=project" class="bunker-note" style="text-decoration: none; cursor: pointer;">[ REQUEST PROJECT ]</a>
-    </div>
-
-<div class="bunker-note" style="max-width: 860px; margin: 30px auto; text-align: left; padding: 20px;">
-    <h3>OPERATIONAL ADD-ONS</h3>
-    <div class="add-on-list">
-        
-        <a href="contact.html?service=metadata" class="add-on-item">
-            <strong>[+] Metadata Refactor ($15):</strong> Post-release updates to lyrics, credits, or artist names.
-            <span class="action-tag">REQUEST</span>
-        </a>
-
-        <a href="contact.html?service=visuals" class="add-on-item">
-            <strong>[+] Visual Processing ($20):</strong> Professional photo editing for cover art or branding.
-            <span class="action-tag">REQUEST</span>
-        </a>
-
-        <a href="contact.html?service=navigation" class="add-on-item">
-            <strong>[+] System Navigation ($25):</strong> Smart Link setup or PRO registration for a single track.
-            <span class="action-tag">REQUEST</span>
-        </a>
-
-    </div>
-</div>
-        
-    <div class="bunker-note" style="max-width: 860px; margin: 30px auto; text-align: left; padding: 20px; border-color: #444;">
-    <h3>WEB ARCHITECTURE</h3>
-    <p style="font-size: 0.85em; color: #888; margin-bottom: 15px;">Custom-coded artist hubs via GitHub. High speed. Zero monthly hosting fees.</p>
-    
-    <div class="add-on-list">
-        <a href="contact.html?service=website" class="add-on-item" style="border-color: var(--accent-green);">
-            <div style="display: flex; flex-direction: column;">
-                <strong>[+] System Entry & Module Expansion</strong>
-                <span style="font-size: 0.8em; color: #ccc; margin-top: 5px;">Starting at $75. Includes base build + $20 per additional page.</span>
-            </div>
-            <span class="action-tag">INITIATE BUILD</span>
-        </a>
-        
-        <a href="contact.html?service=website" class="add-on-item">
-            <div style="display: flex; flex-direction: column;">
-                <strong>[+] Monthly Maintenance Retainer</strong>
-                <span style="font-size: 0.8em; color: #ccc; margin-top: 5px;">$20/mo. Batch updates and system health checks.</span>
-            </div>
-            <span class="action-tag">REQUEST UPKEEP</span>
-        </a>
-    </div>
-</div>
-
-   <div class="system-footer" style="max-width: 860px; margin: 40px auto; display: flex; flex-direction: column; gap: 20px;">
-        
-        <div class="bunker-note" style="text-align: left; width: 100%; box-sizing: border-box;">
-            <strong>DISTRIBUTION POLICY:</strong> Sullied Industries takes 0% of your royalties. 
-            All projects are routed via RouteNote. Choose between 100% Royalty Retention (requires upfront store fee) 
-            or 85% Royalty Retention (zero upfront store fee).
+            <span class="tier-price">$15+</span>
+            <p>A la carte distribution. Singles start at $15. No long-term commitment required.</p>
+            <a href="contact.html?service=project" class="login-btn" style="margin-top: auto; text-align: center;">REQUEST_PROJECT</a>
         </div>
-
-        <div style="text-align: center; width: 100%;">
-            <a href="contact.html" class="login-btn" style="display: inline-block; width: 280px;">REQUEST ASSISTANCE</a>
-            <br><br>
-            <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.8em;">← RETURN TO MAIN SYSTEM</a>
-        </div>
-        
     </div>
 
-<script>
-function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    nav.classList.toggle('active');
-}
-</script>
+    <div class="bunker-note" style="max-width: 900px; margin: 50px auto; text-align: left; padding: 30px;">
+        <h3 style="color: var(--signal-green); margin-bottom: 20px;">OPERATIONAL ADD-ONS</h3>
+        <div class="add-on-list">
+            <a href="contact.html?service=metadata" class="add-on-item">
+                <span><strong>Metadata Refactor:</strong> Lyric/credit updates.</span>
+                <span class="action-tag">$15</span>
+            </a>
+            <a href="contact.html?service=visuals" class="add-on-item">
+                <span><strong>Visual Processing:</strong> Cover art photo editing.</span>
+                <span class="action-tag">$20</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        fetch('nav.html').then(res => res.text()).then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
 </body>
 </html>
