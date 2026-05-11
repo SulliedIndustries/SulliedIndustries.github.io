@@ -346,33 +346,31 @@ body {
 #toolsGrid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 98%;          /* Uses 90% of the screen width */
-    max-width: 1400px;   /* Sets a massive upper limit for ultra-wide screens */
-    margin: 40px auto;   /* Centers the 90% block */
-    padding: 0;          /* Removes any internal padding that might be squishing children */
+    gap: 30px;
+    width: 90%;
+    max-width: 1100px; 
+    margin: 40px auto;
 }
 
-/* THE INDIVIDUAL ENTRIES */
 .tool-entry {
     display: grid;
-    /* Identity (Left) | Review (Middle - Grows) | Specs (Right) */
-    grid-template-columns: 300px 1fr 250px; 
-    gap: 40px;           /* Gives the sections room to breathe */
-    width: 100%;         /* Forces the entry to fill the 90% container */
-    background: #0a0c0b;
-    border: 1px solid #2d3b2d;
-    padding: 30px;       /* Adds internal padding for the text */
-    box-sizing: border-box; /* Includes padding in the 100% width */
+    /* This forces the three columns: 30% width, 40% width, 30% width */
+    grid-template-columns: 0.8fr 1.2fr 1fr; 
+    gap: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #2d3b2d; /* This should now wrap everything */
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures the border stays at the edges */
     align-items: start;
+    text-align: left;
 }
 
-/* Section 1 Adjustments */
-.entry-identity {
+/* Force the sections to stay in their lanes */
+.entry-identity, .entry-context, .entry-log {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
+    width: 100%;
 }
 
 .tool-name {
@@ -409,4 +407,45 @@ body {
         grid-template-columns: 1fr; /* Changes from 3 columns to 1 */
         gap: 25px;
     }
+}
+
+.tool-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px; /* Match this to your grid width */
+    margin: 20px auto;
+    width: 90%;
+}
+
+#toolSearch {
+    width: 70%; /* Give the search bar more room */
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--signal-green);
+    color: #fff;
+    font-family: monospace;
+}
+
+.stat-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: monospace;
+    font-size: 0.8em;
+    color: #fff; /* Changed to white for better contrast like your image */
+}
+
+.stat-group span {
+    display: block;
+    white-space: nowrap; /* Prevents the bars from breaking to a new line */
+}
+
+.add-log-btn {
+    margin-top: 20px;
+    color: var(--signal-green);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 1px;
 }
