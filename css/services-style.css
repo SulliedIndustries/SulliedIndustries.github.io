@@ -369,3 +369,17 @@ div[style*="width: 1000px"] {
     content: " [REQUISITE: SEE SIGN-ON PAGE]";
     color: #fff;
 }
+
+.requirement-tag {
+    display: inline-block;
+    border: 1px solid #ffaa00;
+    color: #ffaa00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px; /* Matches your terminal-style text */
+    font-weight: bold;
+    padding: 3px 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px; /* Pushes the title down slightly */
+    background: transparent;
+}
