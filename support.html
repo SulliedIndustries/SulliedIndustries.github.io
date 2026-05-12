@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sullied Industries | Support & Status</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/support-style.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <main class="support-container">
+        <section class="status-box">
+            <div class="status-header">
+                <h3>SYSTEM_STATUS</h3>
+                <div class="status-light status-online"></div>
+            </div>
+            <p id="status-text">OPERATOR IS: <span class="highlight">ON_THE_CLOCK</span></p>
+            <p class="sub-text">Response times may vary based on current processing load.</p>
+        </section>
+
+        <section class="disclosure-section">
+            <h2>THE_SOLE_OPERATOR_PROTOCOL</h2>
+            <p>Sullied Industries is a centralized operation managed by a single Architect. There is no support department or middle management. Every line of code, every mastered track, and every email response is handled manually. This ensures 100% project integrity at the cost of automated speed.</p>
+        </section>
+
+        <section class="faq-section">
+            <h3>FREQUENTLY_ASKED_QUESTIONS</h3>
+            
+            <div class="faq-item">
+                <span class="q">Q: How long until I hear back?</span>
+                <p class="a">A: Since this is a manual workflow, expect a response within 24-48 hours. If the status light above is offline, it may take longer.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="q">Q: Can I get a refund if I pull the plug?</span>
+                <p class="a">A: Labor already performed is non-refundable. However, per the Sign-On contract, you retain all rights to your masters and can cease distribution at any time.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="q">Q: Why was my contract rejected?</span>
+                <p class="a">A: Rejections are usually due to technical audio quality or scheduling capacity. Check your email for specific feedback on how to meet the standard.</p>
+            </div>
+        </section>
+
+        <section class="action-section">
+            <h3>NEED_SYSTEM_ASSISTANCE?</h3>
+            <p>If your question isn't covered above, transmit a support ticket.</p>
+            <a href="intake.html?type=help" class="login-btn">TRANSMIT_HELP_REQUEST</a>
+        </section>
+    </main>
+
+    <script>
+        fetch('nav.html').then(res => res.text()).then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
