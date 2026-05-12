@@ -2,14 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sullied Industries // SIGN ON</title>
-    <link rel="stylesheet" href="css/style.css"> 
-    <link rel="stylesheet" href="css/signing-style.css"> 
+    <title>Sullied Industries | Sign-On Protocol</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sign-on-style.css">
 </head>
 <body>
     <div id="nav-placeholder"></div>
 
-    <header style="text-align: center; margin-top: 50px;">
-        <h1 style="letter-spacing: 5px; color: var(--signal-green);">SIGN ON</h1>
-        <p style="color: #666; font-size: 0.9em;">How to join our team.</p>
-    </header>
+    <main class="sign-on-container">
+        <h1>SIGN_ON_PROTOCOL</h1>
+        <p>Review the following parameters before establishing a formal service agreement.</p>
+
+        <div class="protocol-grid">
+            <div class="bunker-note">
+                <h3>WHAT_THIS_CONTRACT_DOES</h3>
+                <p>Establishes the legal framework for our professional relationship. It defines payment terms, liability protections, and communication standards to ensure both parties are protected.</p>
+            </div>
+
+            <div class="bunker-note" style="border-color: #500;">
+                <h3>WHAT_IT_DOES_NOT_DO</h3>
+                <p>Signing this document <strong>does not</strong> grant or initiate active services. Services only begin once a project-specific quote is accepted and files are cleared through the Intake Vault.</p>
+            </div>
+        </div>
+
+        <section class="info-section">
+            <div class="bunker-note">
+                <h3>INTELLECTUAL_PROPERTY_&_COPYRIGHT</h3>
+                <p>Sullied Industries operates on a Work-for-Hire basis. You retain 100% ownership of your masters, compositions, and royalties. My role is strictly technical execution; I claim zero stake in your intellectual property.</p>
+            </div>
+        </section>
+
+        <section class="info-section center-text">
+            <h3>OFFLINE_REVIEW</h3>
+            <p class="system-alert">[SYSTEM NOTE: Download the PDF below for full legal disclosure]</p>
+            <a href="files/Sullied_Service_Agreement.pdf" download class="login-btn">DOWNLOAD_SIGN_ON_CONTRACT</a>
+        </section>
+
+        <section class="instruction-box">
+            <h3>EXECUTION_STEPS</h3>
+            <ol class="step-list">
+                <li>Download and review the Contract PDF.</li>
+                <li>Digitally sign or scan the document.</li>
+                <li>Email the signed copy to <strong>[Your Email Here]</strong>.</li>
+                <li><strong>IMPORTANT:</strong> You must include links to 2-3 examples of your previous work (SoundCloud, Spotify, or Drive).</li>
+            </ol>
+            
+            <div class="disclaimer-note">
+                <strong>RIGHT_OF_REFUSAL:</strong> Sullied Industries reserves the right to reject any contract request or project inquiry based on technical compatibility, scheduling, or creative alignment.
+            </div>
+        </section>
+
+        <section class="center-text" style="margin-top: 40px;">
+            <a href="mailto:your-email@gmail.com?subject=Contract Submission: [Artist Name]" class="login-btn" style="background: var(--signal-green); color: #000;">BYPASS_INTAKE_SEND_EMAIL</a>
+            <p style="font-size: 0.75em; color: #555; margin-top: 15px;">Use this button only if you have a signed contract and work examples ready for submission.</p>
+        </section>
+    </main>
+
+    <script>
+        fetch('nav.html').then(res => res.text()).then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
