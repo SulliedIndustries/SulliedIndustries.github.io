@@ -62,3 +62,35 @@
     font-weight: bold;
     transition: 0.3s ease;
 }
+
+/* Styling for the Technical/Execution Note */
+.info-section .disclaimer-note {
+    font-size: 0.85em;
+    color: #888;
+    line-height: 1.4;
+    border: 1px solid #333;
+    border-left: 4px solid #555;
+    background: #0a0a0a;
+}
+
+.info-section .disclaimer-note strong {
+    color: #bbb;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Styling for the Status vs Service section */
+div[style*="border-left: 3px solid #ffaa00"] {
+    background: rgba(255, 170, 0, 0.05) !important;
+}
+
+div[style*="border-left: 3px solid #ffaa00"] h3 {
+    color: #ffaa00 !important;
+}
+
+.tech-list li strong {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+}
