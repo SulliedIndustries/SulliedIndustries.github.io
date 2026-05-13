@@ -18,21 +18,38 @@
     align-items: center;
 }
 
+/* Status Light Base */
 .status-light {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
 }
 
+/* ONLINE (Green) - Working */
 .status-online {
-    background-color: #00ff41; /* Signal Green */
-    box-shadow: 0 0 15px #00ff41;
+    background-color: #00ff41;
+    box-shadow: 0 0 12px #00ff41;
 }
 
+/* STANDBY (Yellow/Amber) - Not Working/After Hours */
+.status-standby {
+    background-color: #ffaa00;
+    box-shadow: 0 0 12px #ffaa00;
+}
+
+/* NODE OFFLINE (Red) - Sick Day / Out of Order */
 .status-offline {
-    background-color: #ff3300; /* Red */
-    box-shadow: 0 0 15px #ff3300;
+    background-color: #ff3300;
+    box-shadow: 0 0 18px #ff3300;
+    animation: pulse-red 2s infinite; /* Optional: adds a slow pulse to the red light */
+}
+
+/* Optional: Pulse animation for the Red Light to catch attention */
+@keyframes pulse-red {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
 
 .highlight {
