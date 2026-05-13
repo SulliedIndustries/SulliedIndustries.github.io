@@ -61,16 +61,16 @@ function toggleMenu() {
     window.addEventListener('load', function() {
         const urlParams = new URLSearchParams(window.location.search);
         const serviceRequested = urlParams.get('service');
-        const selectElement = document.getElementById('service-select');
+        // CHANGE THIS LINE: Use the underscore to match your HTML id
+        const selectElement = document.getElementById('service_select'); 
 
         console.log("System detected service request:", serviceRequested);
 
         if (selectElement) {
             if (serviceRequested) {
-                // This forces the dropdown to the specific value
                 selectElement.value = serviceRequested;
                 
-                // Double check: if it still didn't move, force it by attribute
+                // Backup check
                 if (selectElement.value !== serviceRequested) {
                     for (var i = 0; i < selectElement.options.length; i++) {
                         if (selectElement.options[i].value === serviceRequested) {
@@ -80,7 +80,6 @@ function toggleMenu() {
                     }
                 }
             } else {
-                // No service in URL, reset to the first 'disabled' option
                 selectElement.selectedIndex = 0;
             }
         }
