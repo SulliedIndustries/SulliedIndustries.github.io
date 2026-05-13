@@ -58,32 +58,29 @@ function toggleMenu() {
     nav.classList.toggle('active');
 }
 <script>
-    // 1. Get the "service" value from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const serviceRequested = urlParams.get('service');
-
-    // 2. If there is a service in the URL, select it in the dropdown
-    if (serviceRequested) {
-        const selectElement = document.getElementById('service-select');
-        
-        // Ensure the ID matches the 'id' of your <select> tag
-        if (selectElement) {
-            selectElement.value = serviceRequested;
-        }
-    }
-</script>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
+    window.addEventListener('load', function() {
         const urlParams = new URLSearchParams(window.location.search);
         const serviceRequested = urlParams.get('service');
         const selectElement = document.getElementById('service-select');
 
+        console.log("System detected service request:", serviceRequested);
+
         if (selectElement) {
             if (serviceRequested) {
-                // If a service is in the URL, switch to it
+                // This forces the dropdown to the specific value
                 selectElement.value = serviceRequested;
+                
+                // Double check: if it still didn't move, force it by attribute
+                if (selectElement.value !== serviceRequested) {
+                    for (var i = 0; i < selectElement.options.length; i++) {
+                        if (selectElement.options[i].value === serviceRequested) {
+                            selectElement.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
             } else {
-                // If NO service is in the URL (from Nav Bar), force the placeholder
+                // No service in URL, reset to the first 'disabled' option
                 selectElement.selectedIndex = 0;
             }
         }
