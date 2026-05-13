@@ -354,6 +354,8 @@ div[style*="width: 1000px"] {
 /* --- SERVICE REQUIREMENT TAG --- */
 
 .requirement-tag {
+    position: relative; /* Add this */
+    z-index: 10;        /* Add this */
     display: inline-block;
     border: 1px solid #ffaa00;
     color: #ffaa00;
@@ -365,8 +367,8 @@ div[style*="width: 1000px"] {
     text-transform: uppercase;
     margin-bottom: 12px;
     background: transparent;
-    transition: all 0.3s ease; /* Smooth transition for the hover */
-    cursor: pointer; /* Changes the mouse to a hand icon */
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 /* HOVER STATE: Makes the box glow slightly when hovered */
