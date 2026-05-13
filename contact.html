@@ -61,26 +61,22 @@ function toggleMenu() {
     window.addEventListener('load', function() {
         const urlParams = new URLSearchParams(window.location.search);
         const serviceRequested = urlParams.get('service');
-        // CHANGE THIS LINE: Use the underscore to match your HTML id
-        const selectElement = document.getElementById('service_select'); 
+        
+        // This MUST match the id="service_select" in your HTML above
+        const selectElement = document.getElementById('service_select');
 
-        console.log("System detected service request:", serviceRequested);
-
-        if (selectElement) {
-            if (serviceRequested) {
-                selectElement.value = serviceRequested;
-                
-                // Backup check
-                if (selectElement.value !== serviceRequested) {
-                    for (var i = 0; i < selectElement.options.length; i++) {
-                        if (selectElement.options[i].value === serviceRequested) {
-                            selectElement.selectedIndex = i;
-                            break;
-                        }
+        if (selectElement && serviceRequested) {
+            console.log("System matching service:", serviceRequested);
+            selectElement.value = serviceRequested;
+            
+            // Backup check for browser compatibility
+            if (selectElement.value !== serviceRequested) {
+                for (var i = 0; i < selectElement.options.length; i++) {
+                    if (selectElement.options[i].value === serviceRequested) {
+                        selectElement.selectedIndex = i;
+                        break;
                     }
                 }
-            } else {
-                selectElement.selectedIndex = 0;
             }
         }
     });
