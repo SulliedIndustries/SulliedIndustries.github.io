@@ -58,6 +58,21 @@ function toggleMenu() {
     nav.classList.toggle('active');
 }
 <script>
+    // 1. Get the "service" value from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceRequested = urlParams.get('service');
+
+    // 2. If there is a service in the URL, select it in the dropdown
+    if (serviceRequested) {
+        const selectElement = document.getElementById('service-select');
+        
+        // Ensure the ID matches the 'id' of your <select> tag
+        if (selectElement) {
+            selectElement.value = serviceRequested;
+        }
+    }
+</script>
+<script>
     window.addEventListener('DOMContentLoaded', (event) => {
         const urlParams = new URLSearchParams(window.location.search);
         const serviceRequested = urlParams.get('service');
